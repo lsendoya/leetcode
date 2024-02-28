@@ -13,8 +13,8 @@ func main() {
 // , and false otherwise.
 func IsPalindrome(x int) bool {
 	s := strconv.Itoa(x)
-	for i, j := 0, len(s)-1; i < j; i, j = i+1, j-1 {
-		if s[i] != s[j] {
+	for i := 0; i < len(s)/2; i++ {
+		if s[i] != s[len(s)-1-i] {
 			return false
 		}
 	}
